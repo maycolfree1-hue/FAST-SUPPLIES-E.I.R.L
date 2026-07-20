@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST SUPPLIES E.I.R.L. | Calzado Urbano y Deportivo</title>
+    
+    <!-- SEO Master para Google -->
+    <meta name="description" content="FAST SUPPLIES E.I.R.L. con RUC 20607141526 - Distribuidores mayoristas y minoristas de zapatillas urbanas y deportivas de última tendencia. Envíos a todo el Perú.">
+    <meta name="keywords" content="FAST SUPPLIES E.I.R.L., 20607141526, zapatillas por caja, zapatillas dama, zapatillas peru, catalogo de calzado, modelos Y633, Y630, LD883, Y634">
+    
+    <!-- Tipografía Deportiva/Urbana -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ESTILOS CYBER-URBAN --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #f0f4f8; 
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* --- PORTADA / HERO --- */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, #a5cbf7 0%, #e2eefc 100%);
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 5px solid #3b82f6;
+        }
+
+        .hero-banner::before {
+            content: "URBAN SNEAKERS";
+            position: absolute;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 800;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .company-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .ruc-tag {
+            display: inline-block;
+            background: #0f172a;
+            color: #3b82f6;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            padding: 5px 20px;
+            margin-top: 15px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+
+        .hero-sub {
+            font-size: 1.5rem;
+            color: #475569;
+            margin: 20px 0 35px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .action-button {
+            display: inline-block;
+            background: #3b82f6;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            padding: 15px 40px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .action-button:hover {
+            transform: scale(1.05);
+            background: #2563eb;
+        }
+
+        /* --- CONTENEDOR DE PRODUCTOS (10 ESPACIOS) --- */
+        .catalog-section {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        .catalog-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: #0f172a;
+            position: relative;
+        }
+
+        .catalog-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: #3b82f6;
+            margin: 10px auto 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARD DE ZAPATILLA */
+        .sneaker-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sneaker-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+            border-color: #3b82f6;
+        }
+
+        .image-wrapper {
+            background: #f8fafc;
+            border-radius: 8px;
+            width: 100%;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            text-align: center;
+        }
+
+        .model-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: #0f172a;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .model-details {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .order-btn {
+            display: block;
+            background: #f1f5f9;
+            color: #1e293b;
+            padding: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .sneaker-card:hover .order-btn {
+            background: #3b82f6;
+            color: #ffffff;
+        }
+
+        /* --- CONTACTO DIRECTO --- */
+        .footer-contact {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .footer-contact h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-link {
+            display: inline-block;
+            color: #3b82f6;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: color 0.2s;
+        }
+
+        .whatsapp-link:hover {
+            color: #60a5fa;
+        }
+
+        /* --- FOOTER SEO --- */
+        .seo-footer {
+            background: #020617;
+            padding: 25px 20px;
+            text-align: center;
+            color: #475569;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        @media (max-width: 768px) {
+            .company-name { font-size: 2.2rem; }
+            .hero-banner::before { display: none; }
+            .hero-sub { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PORTADA -->
+    <header class="hero-banner">
+        <div class="hero-container">
+            <h1 class="company-name">FAST SUPPLIES E.I.R.L.</h1>
+            <div class="ruc-tag">RUC: 20607141526</div>
+            <p class="hero-sub">Distribución Mayorista de Calzado Premium</p>
+            <a href="https://wa.me/51999999999?text=Hola%20FAST%20SUPPLIES,%20solicito%20información%20sobre%20el%20catálogo%20de%20calzado" target="_blank" class="action-button">Pedir por WhatsApp</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <main class="catalog-section">
+        <h2 class="catalog-title">Modelos Disponibles</h2>
+        
+        <div class="products-grid">
+            
+            <!-- ESPACIO 1 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla1.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y633">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y633</h3>
+                    <p class="model-details">Planta Eva | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y633%20(Ref:%20Zapatilla1)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 2 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla2.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y633">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y633</h3>
+                    <p class="model-details">Planta Eva | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y633%20(Ref:%20Zapatilla2)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 3 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla3.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y633">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y633</h3>
+                    <p class="model-details">Planta Eva | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y633%20(Ref:%20Zapatilla3)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 4 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla4.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y630">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y630</h3>
+                    <p class="model-details">Urbano Sport | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y630%20(Ref:%20Zapatilla4)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 5 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla5.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y630">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y630</h3>
+                    <p class="model-details">Urbano Sport | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y630%20(Ref:%20Zapatilla5)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 6 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla6.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y630">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y630</h3>
+                    <p class="model-details">Urbano Sport | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y630%20(Ref:%20Zapatilla6)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 7 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla7.png" alt="FAST SUPPLIES E.I.R.L. Modelo LD883">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO LD883</h3>
+                    <p class="model-details">Exclusivo Dama | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20LD883%20(Ref:%20Zapatilla7)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 8 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla8.png" alt="FAST SUPPLIES E.I.R.L. Modelo LD883">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO LD883</h3>
+                    <p class="model-details">Exclusivo Dama | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20LD883%20(Ref:%20Zapatilla8)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 9 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla9.png" alt="FAST SUPPLIES E.I.R.L. Modelo LD883">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO LD883</h3>
+                    <p class="model-details">Exclusivo Dama | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20LD883%20(Ref:%20Zapatilla9)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+            <!-- ESPACIO 10 -->
+            <article class="sneaker-card">
+                <div class="image-wrapper">
+                    <img src="zapatilla10.png" alt="FAST SUPPLIES E.I.R.L. Modelo Y634">
+                </div>
+                <div class="card-info">
+                    <h3 class="model-name">MODELO Y634</h3>
+                    <p class="model-details">Nueva Línea | Tallas: 35-39</p>
+                    <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20el%20Modelo%20Y634%20(Ref:%20Zapatilla10)" class="order-btn" target="_blank">Cotizar Lote</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <section class="footer-contact">
+        <h2>¿Pedidos al por mayor?</h2>
+        <p>Escríbenos directamente para consultar stock disponible por lote o cajón.</p>
+        <a href="https://wa.me/51999999999" class="whatsapp-link" target="_blank">WhatsApp: +51 999 999 999</a>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="seo-footer">
+        <p>© 2026 <strong>FAST SUPPLIES E.I.R.L.</strong> - Todos los derechos reservados.</p>
+        <p>Número de RUC Oficial: 20607141526 | Distribuidora Mayorista de Calzado Urbano y Zapatillas | Lima, Perú</p>
+    </footer>
+
+</body>
+</html>
