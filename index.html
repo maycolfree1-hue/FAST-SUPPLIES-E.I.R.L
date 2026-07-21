@@ -232,7 +232,7 @@
             background: #2563eb;
         }
 
-        /* --- SECCIÓN NOSOTROS --- */
+        /* --- SECCIÓN NOSOTROS (ACTUALIZADA CON LA IMAGEN DE NUESTRA EMPRESA) --- */
         .about-section {
             background: #ffffff;
             padding: 80px 20px;
@@ -240,9 +240,16 @@
         }
 
         .about-container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-content {
+            text-align: left;
         }
 
         .about-badge {
@@ -256,7 +263,7 @@
             display: block;
         }
 
-        .about-container h2 {
+        .about-content h2 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
             color: #0f172a;
@@ -268,6 +275,21 @@
             color: #475569;
             line-height: 1.7;
             font-weight: 500;
+        }
+
+        .about-image-wrapper {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+            border: 2px solid #e2e8f0;
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* --- CONTENEDOR DE PRODUCTOS --- */
@@ -498,6 +520,20 @@
                 transform: translateY(-9px) rotate(-45deg);
             }
 
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .about-content {
+                text-align: center;
+            }
+
+            .about-image-wrapper {
+                height: 300px;
+            }
+
             .company-name { font-size: 2.4rem; }
             .hero-banner::before { display: none; }
             .hero-sub { font-size: 1.2rem; }
@@ -540,11 +576,16 @@
     <!-- SECCIÓN NOSOTROS -->
     <section id="nosotros" class="about-section">
         <div class="about-container">
-            <span class="about-badge">Trayectoria de Calidad</span>
-            <h2>Nuestra Empresa</h2>
-            <p class="about-text">
-                Desde el año 2021 hasta este 2026, en <strong>FAST SUPPLIES E.I.R.L.</strong> nos hemos consolidado como líderes en la distribución y comercialización de calzado urbano y deportivo a nivel nacional. Nos enfocamos en traer las últimas tendencias con materiales altamente competitivos como Planta Eva, asegurando rentabilidad absoluta para tu negocio mayorista y el mejor estilo para tus clientes.
-            </p>
+            <div class="about-content">
+                <span class="about-badge">Trayectoria de Calidad</span>
+                <h2>Nuestra Empresa</h2>
+                <p class="about-text">
+                    Desde el año 2021 hasta este 2026, en <strong>FAST SUPPLIES E.I.R.L.</strong> nos hemos consolidado como líderes en la distribución y comercialización de calzado urbano y deportivo a nivel nacional. Nos enfocamos en traer las últimas tendencias con materiales altamente competitivos como Planta Eva, asegurando rentabilidad absoluta para tu negocio mayorista y el mejor estilo para tus clientes.
+                </p>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="Fasti.jpeg" alt="Logística y distribución de FAST SUPPLIES E.I.R.L.">
+            </div>
         </div>
     </section>
 
