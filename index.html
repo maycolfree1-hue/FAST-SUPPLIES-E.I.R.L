@@ -110,10 +110,10 @@
             transition: all 0.3s ease;
         }
 
-        /* --- PORTADA / HERO CON IMAGEN DE FONDO --- */
+        /* --- PORTADA / HERO CON IMAGEN DE FONDO NÍTIDA SIN OPACIDAD --- */
         .hero-banner {
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.png') no-repeat center center;
+            background: url('hero.png') no-repeat center center;
             background-size: cover;
             padding: 120px 20px;
             text-align: center;
@@ -125,7 +125,7 @@
             position: absolute;
             font-family: 'Orbitron', sans-serif;
             font-size: 8rem;
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.25);
             font-weight: 800;
             top: 15%;
             left: 50%;
@@ -133,6 +133,7 @@
             white-space: nowrap;
             z-index: 0;
             pointer-events: none;
+            text-shadow: 0 0 20px rgba(0,0,0,0.4);
         }
 
         .hero-container {
@@ -149,6 +150,7 @@
             font-weight: 800;
             letter-spacing: 4px;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), -2px -2px 4px rgba(0, 0, 0, 0.9);
         }
 
         .company-name {
@@ -159,7 +161,8 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             line-height: 1.1;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            /* Sombras reforzadas para legibilidad en fondos claros/nítidos */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), -3px -3px 6px rgba(0, 0, 0, 0.9), 0 10px 20px rgba(0, 0, 0, 0.8);
         }
 
         .ruc-tag {
@@ -173,15 +176,17 @@
             border-radius: 4px;
             letter-spacing: 1px;
             font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         .hero-sub {
             font-size: 1.6rem;
-            color: #cbd5e1;
+            color: #ffffff;
             margin: 25px 0 35px 0;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            /* Contraste reforzado al máximo */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9), -2px -2px 5px rgba(0, 0, 0, 0.9), 0 4px 10px rgba(0, 0, 0, 0.8);
         }
 
         /* --- BOTÓN PRINCIPAL --- */
@@ -197,7 +202,7 @@
             text-decoration: none;
             text-transform: uppercase;
             border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             overflow: hidden; 
             transition: transform 0.2s, background-color 0.2s;
             cursor: pointer;
@@ -423,18 +428,16 @@
             fill: #ffffff;
         }
 
-        /* --- RESPONSIVO CELULARES (ACTUALIZADO) --- */
+        /* --- RESPONSIVO CELULARES --- */
         @media (max-width: 768px) {
             .navbar { 
                 padding: 0 24px; 
             }
             
-            /* Activamos el botón de 3 rayitas */
             .menu-toggle { 
                 display: flex; 
             }
 
-            /* Transformamos la lista en un menú colapsable de pantalla completa/drop */
             .nav-menu {
                 position: fixed;
                 top: 70px;
@@ -444,13 +447,12 @@
                 flex-direction: column;
                 gap: 0;
                 text-align: center;
-                max-height: 0; /* Cerrado por defecto */
+                max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.4s ease-in-out;
                 border-bottom: 0 solid #3b82f6;
             }
 
-            /* Clase que activa el JS para abrir el menú */
             .nav-menu.active {
                 max-height: 300px; 
                 border-bottom: 3px solid #3b82f6;
@@ -467,7 +469,6 @@
                 border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             }
 
-            /* Animación de las 3 rayitas cuando se abre */
             .menu-toggle.active .bar:nth-child(1) {
                 transform: translateY(9px) rotate(45deg);
             }
@@ -478,7 +479,6 @@
                 transform: translateY(-9px) rotate(-45deg);
             }
 
-            /* Ajustes estéticos generales en móvil */
             .company-name { font-size: 2.4rem; }
             .hero-banner::before { display: none; }
             .hero-sub { font-size: 1.2rem; }
@@ -493,7 +493,6 @@
     <nav class="navbar">
         <a href="#inicio" class="nav-logo">FAST<span>SUPPLIES</span></a>
         
-        <!-- Botón de 3 rayitas (hamburguesa) -->
         <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -684,13 +683,11 @@
         const menuToggle = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
 
-        // Abre y cierra el menú al hacer clic en las 3 rayitas
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navList.classList.toggle('active');
         });
 
-        // Cierra automáticamente el menú cuando el usuario hace clic en una sección
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
